@@ -3,7 +3,7 @@ const Projects = () => {
     {
       title: "Portfolio Website",
       description: "A personal portfolio to showcase my skills and projects.",
-      link: "https://your-portfolio-link.com"
+      link: "https://github.com/punamth/Portfolio.git"
     },
     {
       title: "Business Management System for SMEs (Small and Medium-sized Enterprises)",
