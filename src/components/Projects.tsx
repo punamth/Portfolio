@@ -2,7 +2,7 @@ const Projects = () => {
   const projectList = [
     {
       title: "Portfolio Website",
-      description: "A personal portfolio to showcase my skills and projects.",
+      description: "A personal portfolio to showcase my skills and projects using react and typescript.",
       link: "https://github.com/punamth/Portfolio.git"
     },
     {
