@@ -11,9 +11,9 @@ const Projects = () => {
       link: "https://github.com/punamth/businessManagerDashboard.git"
     },
     {
-      title: "Currency Converter",
-      description: "A simple Django website along with html/css that converts one currency into another by using an open API.",
-      link: "https://github.com/punamth/currencyConverter.git"
+      title: "Weather-App",
+      description: "A weather web app built with Vite, React, and TypeScript.It integrates the Visual Crossing Weather API to provide current conditions and a 24-hour forecast for any location.",
+      link: "https://github.com/punamth/Weather-App.git"
     }
   ];
 
