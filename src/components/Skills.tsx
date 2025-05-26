@@ -1,5 +1,5 @@
 const Skills = () => {
-  const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'TypeScript', 'Git'];
+  const skills = ['PHP', 'Python', 'JavaScript', 'React', 'TypeScript', 'Git'];
 
   return (
     <section id="skills" className="py-5 bg-light" style={{ minHeight: '80vh' }}>
