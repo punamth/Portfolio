@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 const Skills = () => {
-  const skills = ['PHP', 'Python', 'JavaScript', 'React', 'TypeScript', 'Git'];
+  const skills = ['PHP', 'Python', 'JavaScript', 'React', 'TypeScript', 'Git', 'Tailwind CSS' , 'Bootstrap'];
 
   // Animation variants for staggered left-to-right effect
   const containerVariants = {

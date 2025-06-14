@@ -89,14 +89,19 @@ const Contact = () => {
               <div className="text-center mt-8">
                 <button 
                   type="submit" 
-                  className="px-12 py-4 font-bold text-white rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                  className="px-8 py-3 font-semibold text-white rounded-3xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
                   style={{ backgroundColor: '#ec4899' }}
-                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#be185d'}
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#ec4899'}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#be185d';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = '#ec4899';
+                  }}
                 >
                   Send Message 
                 </button>
               </div>
+              <br/>
 
               {statusMessage && (
                 <div
