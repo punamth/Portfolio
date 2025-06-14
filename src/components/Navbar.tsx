@@ -6,7 +6,7 @@ const Navbar = () => {
   const location = useLocation();
 
   const navItems = [
-    { name: 'Home', path: '/' },
+    { name: 'Home', path: '/Portfolio' },
     { name: 'About', path: '/about' },
     { name: 'Skills', path: '/skills' },
     { name: 'Projects', path: '/projects' },
@@ -15,7 +15,7 @@ const Navbar = () => {
 
   const getActiveSection = () => {
     const pathname = location.pathname;
-    if (pathname === '/') return 'home';
+    if (pathname === '/Portfolio') return 'home';
     return pathname.substring(1);
   };
 
@@ -54,7 +54,7 @@ const Navbar = () => {
                 <Link
                   to={path}
                   className={`block cursor-pointer py-2 lg:py-0 transition-colors duration-300 ${
-                    activeSection === (path === '/' ? 'home' : path.substring(1))
+                    activeSection === (path === '/Portfolio' ? 'home' : path.substring(1))
                       ? 'text-pink-600 font-bold'
                       : 'text-gray-800 hover:text-pink-600'
                   }`}
