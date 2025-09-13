@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+
+/* Custom theme tokens */
+@theme {
+  --color-cream: #fffdfb;
+  --color-ink: #232323;
+  --color-muted: #6b7280;
+
+  --color-blush-300: #f8c7cf;
+  --color-blush-400: #f2a8b7;
+  --color-blush-500: #e8899f;
+  --color-blush-600: #d96b86;
+  --color-blush-700: #c25771;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Calibri', serif;
+}
+
+.blinking-cursor {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #333;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
