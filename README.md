@@ -11,6 +11,4 @@ Run the following command to install dependencies (this reads the package.json):
 Once dependencies are installed, start the Vite development server
 >>> npm run dev
 
-4. Open the App in Your Browser
-After running the dev command, Vite will show a local server address (typically http://localhost:5173).
-Open this address in your browser to view your React app.
+
