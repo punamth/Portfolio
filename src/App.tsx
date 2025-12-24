@@ -16,7 +16,7 @@ function App() {
       <Projects />
 
       {/* Contact + Footer section */}
-      <div className="mt-16 flex flex-col gap-18">
+      <div className="mt-24 sm:mt-16 flex flex-col gap-18">
         <Contact />
         <Footer />
       </div>
