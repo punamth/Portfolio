@@ -39,7 +39,7 @@ const Contact = () => {
   return (
    <section
       id="contact"
-      className="w-full flex flex-col items-center justify-center bg-cream text-ink py-16 sm:py-20"
+      className="w-full flex flex-col items-center justify-center bg-cream text-ink py-16 sm:py-10"
     >
       <h2
         className="text-center text-blush-600 font-extrabold mb-10"
