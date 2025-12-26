@@ -3,7 +3,7 @@ import type{Variants } from "framer-motion";
 
 
 const Skills = () => {
-  const skills = ['Python', 'C#', 'JavaScript', 'React', 'TypeScript', 'Git', 'Tailwind CSS'];
+  const skills = ['JavaScript', 'React', 'C#', 'Python','Git', 'Tailwind CSS'];
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
