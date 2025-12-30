@@ -1,7 +1,7 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { Typewriter } from "react-simple-typewriter";
-import profileImage from "../assets/Punam.jpg";
+import profileImage from "../assets/Punam.png";
 
 const Home = () => {
   const controls = useAnimation();
