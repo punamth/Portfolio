@@ -1,103 +1,101 @@
-import { motion } from "framer-motion";
-import type{Variants } from "framer-motion";
+const skills = [
+  { 
+    name: 'HTML', 
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+    color: 'from-orange-500 to-red-500',
+    bg: 'bg-white'
+  },
+  { 
+    name: 'CSS', 
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+    color: 'from-blue-500 to-cyan-500',
+    bg: 'bg-white'
+  },
+  { 
+    name: 'JavaScript', 
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+    color: 'from-yellow-400 to-yellow-600',
+    bg: 'bg-white'
+  },
+  { 
+    name: 'React', 
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    color: 'from-cyan-400 to-blue-500',
+    bg: 'bg-white'
+  },
+  { 
+    name: 'Python', 
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+    color: 'from-blue-600 to-yellow-500',
+    bg: 'bg-white'
+  },
+  { 
+    name: 'C#', 
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg',
+    color: 'from-purple-600 to-purple-800',
+    bg: 'bg-white'
+  },
+  { 
+    name: 'Git', 
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+    color: 'from-orange-600 to-red-600',
+    bg: 'bg-white'
+  },
+  { 
+    name: 'Tailwind CSS', 
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
+    color: 'from-teal-400 to-blue-600',
+    bg: 'bg-white'
+  },
+];
 
-
-const Skills = () => {
-  const skills = ['JavaScript', 'React', 'Python', 'C#',  'Git', 'Tailwind CSS'];
-
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
-    },
-  };
-
-  const skillVariants: Variants = {
-    hidden: { 
-      opacity: 0, 
-      x: -60,
-      scale: 0.8,
-    },
-    visible: { 
-      opacity: 1, 
-      x: 0,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        ease: [0.42, 0, 1, 1], // Fixed easing
-      },
-    },
-  };
-
+export default function Skills() {
   return (
-    <section 
-      id="skills" 
-      className="bg-cream text-ink py-16 sm:py-20 min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-24"
-    >
-      <div className="text-center text-blush-600 font-md mb-10">
-        <motion.h1
-          className="bg-cream text-2xl sm:text-xl md:text-6xl lg:text-7xl font-semibold text-blush-600"
-          style={{
-            fontSize: '38px',
-            lineHeight: '1.2',
-          }}
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: false, amount: 0.4 }}
-        >
-          Skills
-        </motion.h1>
-
-        <br />
-
-        <motion.div 
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
-        >
-          {skills.map((skill, index) => (
-            <motion.div
-              key={index}
-              className="group relative"
-              variants={skillVariants}
-              whileHover={{ 
-                scale: 1.05,
-                transition: { duration: 0.2 },
-              }}
-            >
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 border-l-4 border-blush-500 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-blush-300/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="relative z-10 flex items-center justify-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div 
-                    className="w-10 h-10 bg-gradient-to-br from-blush-500 to-blush-600 rounded-full flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow duration-300"
-                  >
-                    <span className="text-white font-bold text-sm">
-                      {skill.charAt(0)}
-                    </span>
-                  </div>
-                </div>
-                <div className="flex-1 text-left ml-1 sm:ml-2">
-                  <h3 className="font-medium text-ink group-hover:text-blush-600 transition-colors duration-300" style={{ fontSize: '24px' }}>
-                    {skill}
-                  </h3>
-                  <div className="w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-blush-500 to-blush-300 transition-all duration-500 mt-1"></div>
-                </div>
-              </div>
-            </div>
-            </motion.div>
-          ))}
-        </motion.div>
+    <section id="skills" className="bg-[#0B1323] py-16 sm:py-20 min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-24">
+      {/* Background decoration */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 right-5 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
       </div>
+
+      <div className="text-center text-[#D9A441] font-md mb-10">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="!text-5xl md:text-5xl lg:text-6xl text-center mb-3 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
+            Skills
+          </h2>
+          <p className="text-center text-white mb-4 text-2xl max-w-2xl mx-auto">
+            Tools and Technologies I work with
+          </p>
+          <br/>
+          <br/>
+        
+          <div className="flex justify-center">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-16">
+              {skills.map((skill) => {
+                return (
+                  <div key={skill.name} className="flex flex-col items-center gap-6">
+                    <div
+                      className={`group relative ${skill.bg} backdrop-blur-sm rounded-2xl w-28 h-28 border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 flex items-center justify-center`}
+                    >
+                      <div className="w-20 h-20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <img 
+                          src={skill.icon} 
+                          alt={skill.name}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
+                    </div>
+                    <h3 className="text-white text-center text-md">
+                      {skill.name}
+                    </h3>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          </div>
+        </div>
     </section>
   );
-};
-
-export default Skills;
+}
