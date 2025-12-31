@@ -4,15 +4,7 @@
 
 /* Custom theme tokens */
 @theme {
-  --color-cream: #fffdfb;
-  --color-ink: #232323;
-  --color-muted: #6b7280;
-
-  --color-blush-300: #f8c7cf;
-  --color-blush-400: #f2a8b7;
-  --color-blush-500: #e8899f;
-  --color-blush-600: #d96b86;
-  --color-blush-700: #c25771;
+  --color-dark: #D9A441;
 }
 
 html {
@@ -20,7 +12,7 @@ html {
 }
 
 body {
-  font-family: 'Calibri', serif;
+  font-family: 'Playfair Display', serif;
 }
 
 .blinking-cursor {
