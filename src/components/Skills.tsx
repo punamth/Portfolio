@@ -18,6 +18,12 @@ const skills = [
     bg: 'bg-white'
   },
   { 
+    name: 'TypeScript', 
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+    color: 'from-blue-500 to-blue-700',
+    bg: 'bg-white'
+  },
+  { 
     name: 'React', 
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
     color: 'from-cyan-400 to-blue-500',
@@ -58,19 +64,19 @@ export default function Skills() {
         <div className="absolute bottom-1/4 left-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="text-center text-[#D9A441] font-md mb-10">
-        <div className="max-w-5xl mx-auto">
+       <div className="text-[#D9A441] font-md mb-10">
+        <div className="max-w-6xl mx-auto flex flex-col items-center">
           <h2 className="!text-5xl md:text-5xl lg:text-6xl text-center mb-3 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
             Skills
           </h2>
-          <p className="text-center text-white mb-4 text-2xl max-w-2xl mx-auto">
+          <p className="text-center text-white mb-4 text-xl max-w-2xl mx-auto pl-6 sm:pl-10">
             Tools and Technologies I work with
           </p>
           <br/>
           <br/>
         
           <div className="flex justify-center">
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-16">
               {skills.map((skill) => {
                 return (
                   <div key={skill.name} className="flex flex-col items-center gap-6">
