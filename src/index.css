@@ -1,29 +1,12 @@
 @import "tailwindcss";
-@import "tailwindcss/preflight";
-@import "tailwindcss/utilities";
 
-/* Custom theme tokens */
-@theme {
-  --color-dark: #D9A441;
-}
 
-html {
-  scroll-behavior: smooth;
+/* Account for fixed navbar height */
+html{
+  scroll: behavior: smooth;
 }
 
 body {
   font-family: 'Playfair Display', serif;
 }
 
-.blinking-cursor {
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: #333;
-  animation: blink 1s step-start infinite;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}

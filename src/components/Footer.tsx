@@ -21,21 +21,21 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-blush-700 flex flex-col items-center justify-center text-white py-12 mt-12">
+    <footer className="bg-gradient-to-r from-[#D9A441] to-orange-400 flex flex-col items-center justify-center text-[#0B1323] py-4">
       <div className="max-w-7xl mx-auto px-6 lg:px-20">
         <div className="text-center">
           {/* Copyright */}
-          <p className="mb-6 text-lg">&copy; {new Date().getFullYear()} Punam Thokar. All rights reserved.</p>
+          <p className="mb-2 text-lg">&copy; {new Date().getFullYear()} Punam Thokar. All rights reserved.</p>
 
           {/* Social Links */}
-          <div className="flex justify-center space-x-6 mb-6">
+          <div className="flex justify-center space-x-6 mb-2">
             {socialLinks.map((link, index) => (
               <a
                 key={index}
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-12 h-12 border border-blush-500/40 hover:bg-blush-600 hover:text-white hover:border-blush-600 rounded-lg transition-colors duration-300 text-white"
+                className="flex items-center justify-center w-10 h-10 border border-blush-500/40 hover:bg-[#0B1323] hover:text-white hover:border-blush-600 rounded-lg transition-colors duration-300 text-[#0B1323]"
                 aria-label={link.name}
               >
                 {link.icon}
@@ -44,7 +44,7 @@ const Footer = () => {
           </div>
 
           {/* Built with info */}
-          <p className="text-sm text-white">Built with passion using React &amp; TypeScript</p>
+          <p className="text-md text-[#0B1323]">Built with passion using React &amp; TypeScript</p>
         </div>
       </div>
     </footer>
