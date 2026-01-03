@@ -27,53 +27,50 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="bg-[#0B1323] text-[#D9A441] py-20 sm:py-20 min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-24"
+      className="bg-[#0B1323] text-[#D9A441] py-28 sm:py-20 min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-24"
     >
       <div className="container text-center max-w-6xl">
         {/* Projects Title */}
-        <h2 className="!text-5xl !md:text-5xl lg:text-6xl text-center mb-6 pb-2 leading-[1.2]
+        <h2 className="text-5xl md:text-3xl lg:text-5xl text-center mb-6 pb-2 leading-[1.2]
                text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
           Projects
         </h2>
-        <br/>
-        <br />
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-8 max-w-6xl mx-auto">
           {projectList.map((project, index) => (
             <div
               key={index}
               className="group relative"
             >
-              <div className="bg-[#162653] rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 relative overflow-hidden h-full flex flex-col">
+              <div className="bg-[#162653] rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-600 relative overflow-hidden flex flex-col">
                 {/* Subtle gradient overlay */}
-                <div className="absolute inset-0"></div>
+                 <div className="absolute inset-0 pointer-events-none"></div>
 
                 {/* Project Image */}
-                <div className="relative z-10 overflow-hidden aspect-[14/7]">
+                <div className="relative z-10 overflow-hidden aspect-[16/8]">
                   <img
                     src={project.image}
                     alt={`${project.title} preview`}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                  {/* Overlay gradient on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-300"></div>
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent
+                                  opacity-0 transition-opacity duration-300 pointer-events-none" />
                 </div>
 
                 {/* Project Content */}
-                <div className="p-6 sm:p-8 flex flex-col flex-1">
+                <div className="pt-2 px-4 pb-4 sm:pt-3 sm:px-8 sm:pb-6 flex flex-col flex-1">
                   {/* Project Header */}
-                  <div className="relative z-10 mb-6 text-center">
-                    <h3 className="!text-xl sm:text-3xl font-extrabold text-white mb-3 leading-tight break-words">
+                  <div className="relative z-10 mb-2 text-center">
+                    <h3 className="text-xl sm:text-xl font-bold text-white mb-3 leading-tight break-words">
                       {project.title}
                     </h3>
-                    <br/>
-                   <div className="flex flex-wrap gap-3 justify-center">
+                   <div className="flex flex-wrap gap-2 justify-center">
                       {project.tech.map((tech, index) => (
                         <span
                           key={index}
-                          className="!px-3 py-2 text-xs sm:text-sm font-sm text-[#162653]
+                          className="px-2 text-md sm:text-md font-md text-[#162653]
                                     rounded-lg bg-white border border-white/40
                                     backdrop-blur-sm"
                         >
@@ -82,10 +79,9 @@ const Projects = () => {
                       ))}
                     </div>               
                   </div>
-                  <br/>
 
                   {/* Project Link/Button */}
-                  <div className="relative z-10 mt-auto">
+                  <div className="relative z-10">
                     {project.link ? (
                       <a
                         href={project.link}

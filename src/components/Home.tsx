@@ -7,7 +7,6 @@ const Home = () => {
   const controls = useAnimation();
 
   useEffect(() => {
-    // Start animation when component mounts
     controls.start({
       opacity: 1,
       x: 0,
@@ -16,142 +15,120 @@ const Home = () => {
   }, [controls]);
 
   return (
-    <section
-      id="home"
-      className="bg-cream text-ink min-h-screen flex items-center justify-center"
+    <section 
+      id="home" 
+      className="bg-[#0B1323] min-h-screen flex items-center justify-center px-4 py-16 sm:py-20 sm:px-6 lg:px-12"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-20 w-full">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+      <div className="max-w-7xl mx-auto w-full">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
+          
           {/* Left Content */}
-          <motion.div
-            className="md:w-1/2 text-center md:text-left"
-            initial={{ opacity: 0, x: -50 }}
-            animate={controls}
-          >
-            <motion.div
-              className="flex items-start justify-center md:justify-start space-x-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <span className="text-lg sm:text-4xl text-ink font-semibold">
+          <div className="w-full lg:w-1/2 text-center lg:text-left space-y-4 sm:space-y-6 relative z-10">
+
+            {/* Greeting */}
+            <div className="flex items-center justify-center lg:justify-start">
+              <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white font-semibold">
                 Hello, I'm
               </span>
-            </motion.div>
+            </div>
 
             {/* Name */}
             <motion.h1
-              className="text-3xl sm:text-5xl font-bold leading-tight text-blush-600 mt-4 break-words"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-[#D9A441]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
             >
               <motion.span
                 className="block"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
               >
-                <span className="text-3xl sm:text-5xl text-blush-600 font-bold">
-                  <Typewriter
-                    words={["Punam Thokar"]}
-                    loop={true}
-                    cursor
-                    cursorStyle="|"
-                    typeSpeed={100}
-                    deleteSpeed={50}
-                    delaySpeed={1500}
-                  />
-                </span>
+                <Typewriter
+                  words={["Punam Thokar"]}
+                  loop={true}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={100}
+                  deleteSpeed={50}
+                  delaySpeed={1500}
+                />
               </motion.span>
             </motion.h1>
-            <br/>
 
-            {/* Title */}
-            <motion.div
-              className="mt-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.0 }}
-            >
-              <p className="text-lg sm:text-2xl font-bold text-ink">
-                 I am a <span className="text-2xl sm:text-3xl text-blush-600 font-bold">Web Developer</span> based in Nepal.
+            {/* Title & Description */}
+            <div className="space-y-4">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white font-bold">
+                I am a{" "}
+                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#D9A441] font-bold">
+                  Software developer
+                </span>{" "}
+                based in Nepal.
               </p>
-            </motion.div>
-            <br/>
-               <div className="flex flex-row gap-8">
+              
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-medium leading-relaxed">
+                I love turning ideas into real, usable products.
+                I am passionate about technology, clean code, and building solutions that 
+                make an impact.
+              </p>
+               </div>
+             <div className="flex flex-row gap-6 mt-10 justify-center md:justify-start">
+      
                 {/* View Projects Button */}
                 <a
                   href="#projects"
-                  className="bg-blush-600 text-gray-800 px-8 py-4 rounded-lg font-semibold shadow hover:bg-blush-700 flex items-center justify-center transform scale-[1.2] transition-transform duration-200"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="bg-white text-[#0B1323] px-2 py-1 rounded-lg font-semibold md:text-lg sm:text-sm flex items-center justify-center gap-2 transition-all duration-200 hover:scale-105 relative z-20" /* Added relative z-20 */
                 >
                   View Projects
+                  <i className="fa-solid fa-angle-down"></i>
                 </a>
 
                 {/* Contact Button */}
                 <a
                   href="#contact"
-                  className="bg-blush-600 text-gray-800 px-8 py-4 rounded-lg font-semibold shadow hover:bg-blush-700 flex items-center justify-center gap-2 transform scale-[1.2] transition-transform duration-200"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="bg-[#c28f2f] text-[#0B1323] px-2 py-1 rounded-lg font-semibold md:text-lg sm:text-sm flex items-center justify-center gap-2 transition-all duration-200 hover:scale-105 hover:bg-[#d4a540] relative z-20" /* Added relative z-20 */
                 >
                   Contact Me
                   <i className="fa-solid fa-envelope"></i>
                 </a>
-               </div>
-
-          </motion.div>
+            </div>
+          </div>
 
           {/* Right Image */}
           <motion.div
-            className="md:w-1/2 mt-10 md:mt-0 px-4 sm:px-0"
+            className="w-full lg:w-1/2 flex justify-center lg:justify-end mt-8 lg:mt-0 pointer-events-none" /* Added pointer-events: none */
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
           >
             <motion.div
-              className="relative w-full max-w-xs sm:max-w-sm mx-auto overflow-visible"
+              className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-100 lg:h-100 overflow-visible"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               whileHover={{ scale: 1.05 }}
             >
               <img
                 src={profileImage}
                 alt="Punam Thokar"
-                className="w-full object-cover rounded-full shadow-2xl border-4 border-white"
-              />
-
-              {/* Decorative Dots */}
-              <motion.div
-                className="absolute -top-4 -right-4 w-8 h-8 bg-blush-500 rounded-full shadow-lg"
-                animate={{ y: [0, -10, 0], scale: [1, 1.1, 1] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              />
-              <motion.div
-                className="absolute -bottom-4 -left-4 w-6 h-6 bg-blush-400 rounded-full shadow-lg"
-                animate={{ y: [0, 10, 0], scale: [1, 1.2, 1] }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 1.5,
-                }}
-              />
-              <motion.div
-                className="absolute top-1/4 -right-8 w-4 h-4 bg-blush-300 rounded-full shadow-lg"
-                animate={{ x: [0, 10, 0], opacity: [0.7, 1, 0.7] }}
-                transition={{
-                  duration: 2.5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 0.5,
-                }}
+                className="w-full h-full object-cover rounded-full shadow-2xl border-4 border-white pointer-events-auto" /* Added pointer-events: auto */
               />
             </motion.div>
           </motion.div>
+         
         </div>
       </div>
     </section>
   );
-};
+}
 
 export default Home;
