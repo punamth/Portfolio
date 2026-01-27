@@ -1,6 +1,7 @@
 import quizImg from '../assets/quiz_app.png';
 import learnlyImg from '../assets/learnly.png';
 import weatherImg from '../assets/Weather-app.png';
+import videoImg from '../assets/video_conferencing_app.png';
 
 const Projects = () => {
   const projectList = [
@@ -11,17 +12,24 @@ const Projects = () => {
       image: quizImg
     },
     {
+      title: "Video_Conferencing_Web_App",
+      link:"https://video-conferencing-web-app-ue43.onrender.com",
+      tech: ["MongoDB" , "Express" , "React", "Node.js"],
+      image: videoImg
+    },
+    {
+      title: "⛅Weather-App",
+      link: "https://weatherapp-1v708oap7-punamths-projects.vercel.app/",
+      tech: ["React", "TypeScript", "API"],
+      image: weatherImg
+    },
+
+    {
       title: "📖Learning Management System",
       link:"https://github.com/punamth/Learning-Management-System",
       tech: ["React" , "Typescript" , "ASP.NET Core"],
       image: learnlyImg
     },
-    {
-      title: "⛅Weather-App",
-      link: "https://github.com/punamth/Weather-App.git",
-      tech: ["React", "TypeScript", "API"],
-      image: weatherImg
-    }
   ];
 
   return (
@@ -66,11 +74,11 @@ const Projects = () => {
                     <h3 className="text-xl sm:text-xl font-bold text-white mb-3 leading-tight break-words">
                       {project.title}
                     </h3>
-                   <div className="flex flex-wrap gap-2 justify-center">
+                   <div className="flex flex-wrap gap-1 justify-center">
                       {project.tech.map((tech, index) => (
                         <span
                           key={index}
-                          className="px-2 text-md sm:text-md font-md text-[#162653]
+                          className="px-2 text-sm sm:text-md font-md text-[#162653]
                                     rounded-lg bg-white border border-white/40
                                     backdrop-blur-sm"
                         >
