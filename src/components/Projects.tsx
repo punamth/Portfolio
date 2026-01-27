@@ -1,7 +1,7 @@
 import quizImg from '../assets/quiz_app.png';
 import learnlyImg from '../assets/learnly.png';
 import weatherImg from '../assets/Weather-app.png';
-import videoImg from '../assets/video_conferencing_app.png';
+import videoImg from '../assets/Video_conferencing_app.png';
 
 const Projects = () => {
   const projectList = [
