@@ -53,6 +53,20 @@ const skills = [
     color: 'from-teal-400 to-blue-600',
     bg: 'bg-white'
   },
+
+  { 
+    name: 'Node.js', 
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+    color: 'from-green-500 to-green-700',
+    bg: 'bg-white'
+  },
+
+  {
+    name: 'MongoDB',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+    color: 'from-green-600 to-green-800',
+    bg: 'bg-white'
+  },
 ];
 
 export default function Skills() {
@@ -76,14 +90,14 @@ export default function Skills() {
           <br/>
         
           <div className="flex justify-center">
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-16">
               {skills.map((skill) => {
                 return (
-                  <div key={skill.name} className="flex flex-col items-center gap-6">
+                  <div key={skill.name} className="flex flex-col items-center gap-4">
                     <div
-                      className={`group relative ${skill.bg} backdrop-blur-sm rounded-2xl w-28 h-28 border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 flex items-center justify-center`}
+                      className={`group relative ${skill.bg} backdrop-blur-sm rounded-2xl w-20 h-20 border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 flex items-center justify-center`}
                     >
-                      <div className="w-20 h-20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-15 h-15 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         <img 
                           src={skill.icon} 
                           alt={skill.name}
