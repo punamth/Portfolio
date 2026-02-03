@@ -8,6 +8,7 @@ const Projects = () => {
     {
       title: "🧠Quiz App",
       link: "https://punamth.github.io/Quiz-App/",
+      github:"https://github.com/punamth/Quiz-App",
       tech: ["React", "TypeScript", "Redux"],
       image: quizImg
     },
@@ -15,19 +16,21 @@ const Projects = () => {
       title: "Video_Conferencing_Web_App",
       link:"https://video-conferencing-web-app-ue43.onrender.com",
       tech: ["MongoDB" , "Express" , "React", "Node.js"],
+      github:"https://github.com/punamth/Video-Conferencing_Web_App",
       image: videoImg
     },
     {
       title: "⛅Weather-App",
       link: "https://weatherapp-1v708oap7-punamths-projects.vercel.app/",
       tech: ["React", "TypeScript", "API"],
+      github:"https://github.com/punamth/Weather-App",
       image: weatherImg
     },
 
     {
       title: "📖Learning Management System",
-      link:"https://github.com/punamth/Learning-Management-System",
       tech: ["React" , "Typescript" , "ASP.NET Core"],
+      github:"https://github.com/punamth/LMS_backend",
       image: learnlyImg
     },
   ];
@@ -89,17 +92,18 @@ const Projects = () => {
                   </div>
 
                   {/* Project Link/Button */}
-                  <div className="relative z-10">
-                    {project.link ? (
+                  <div className="relative z-10 flex items-center justify-center gap-6 mt-3">
+                    {/* Live Project */}
+                    {project.link && (
                       <a
                         href={project.link}
-                        className="inline-flex items-center text-blush-600 hover:text-blush-600 font-medium transition-colors duration-200 group/link"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="inline-flex items-center text-[#D9A441] font-medium transition group"
                       >
-                        <span className="mr-2 text-[#D9A441]">View Project</span>
+                        <span className="mr-2">Live Project</span>
                         <svg
-                          className="w-4 h-4 transition-transform duration-200 group-hover/link:translate-x-1"
+                          className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -112,8 +116,25 @@ const Projects = () => {
                           />
                         </svg>
                       </a>
-                    ) : (
-                      <div className="text-gray-400 font-medium">Coming Soon</div>
+                    )}
+
+                    {/* GitHub Link */}
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-white hover:text-gray-300 transition"
+                        aria-label="GitHub Repository"
+                      >
+                        <svg
+                          className="w-5 h-5"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.02c-3.34.72-4.04-1.42-4.04-1.42-.54-1.36-1.32-1.72-1.32-1.72-1.08-.74.08-.72.08-.72 1.2.08 1.84 1.24 1.84 1.24 1.06 1.82 2.78 1.3 3.46 1 .1-.78.42-1.3.76-1.6-2.66-.3-5.46-1.34-5.46-5.94 0-1.32.46-2.4 1.24-3.24-.12-.3-.54-1.52.12-3.16 0 0 1-.32 3.3 1.24a11.4 11.4 0 016 0c2.28-1.56 3.28-1.24 3.28-1.24.66 1.64.24 2.86.12 3.16.78.84 1.24 1.92 1.24 3.24 0 4.62-2.8 5.64-5.48 5.94.44.38.82 1.1.82 2.22v3.3c0 .32.22.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                      </a>
                     )}
                   </div>
                 </div>
